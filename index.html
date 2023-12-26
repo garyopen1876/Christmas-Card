@@ -12,22 +12,21 @@
         --tape-gray: #dbd8be;
         --tape-edge-gray: #b7b49d;
         --transparent: rgba(255, 255, 255, 0);
+        background: #163057;
     }
 
     canvas {
-        height: 100%;
-        left: 0;
         position: absolute;
-        top: 0;
+        height: 100%;
         width: 100%;
+        left: 0;
+        top: 0;
     }
 
     body {
-        background: black;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+        border-bottom: 1rem solid #fff;
+        height: 100vh;
+        width: 100vw;
     }
 
     .blue {
@@ -40,8 +39,8 @@
     .paper {
         position: relative;
         background: linear-gradient(to bottom right, var(--paper-dark), 20%, var(--transparent)), var(--paper-color);
-        min-width: 600px;
-        min-height: 700px;
+        max-width: 80%;
+        max-height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -49,7 +48,6 @@
         font-size: 2rem;
         box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
         margin: auto;
-        margin: 50px;
         padding: 15px;
     }
 
@@ -58,17 +56,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(var(--transparent),
-                50%,
-                var(--paper-dark),
-                51%,
-                var(--transparent)),
-            linear-gradient(to right,
-                var(--transparent),
-                50%,
-                var(--paper-dark),
-                51%,
-                var(--transparent));
+        background: linear-gradient(var(--transparent), 50%, var(--paper-dark), 51%, var(--transparent)), linear-gradient(to right, var(--transparent), 50%, var(--paper-dark), 51%, var(--transparent));
     }
 
     .top-tape {
@@ -81,6 +69,22 @@
         border-left: 1px dotted var(--tape-edge-gray);
         opacity: 0.5;
     }
+
+    .santa {
+        position: absolute;
+        height: 10rem;
+        width: 10rem;
+        right: 0;
+        bottom: -5.5rem;
+    }
+
+    .tree {
+        position: absolute;
+        height: 15rem;
+        width: 15rem;
+        left: 2rem;
+        bottom: -5rem;
+    }
 </style>
 
 <body>
@@ -88,19 +92,11 @@
     <div class="paper blue">
         <div class="top-tape"></div>
         <p>
-            聖誕佳節即將降臨，這是一個充滿愛與喜悅的時刻，我想藉著這封簡短的信，送上我最誠摯的祝福，祝福您和您的家人在這美好的季節裡充滿幸福和歡笑。
-
-            在這個特別的日子裡，讓我們一同懷念過去的一年，感謝生活中的點點滴滴。或許我們經歷了一些挑戰，但也收穫了許多美好的回憶和成就。願這一年的收獲成為您未來的動力，繼續奮鬥追尋更多美好。
-
-            聖誕節是家庭團聚的時刻，讓我們一同享受這溫馨的氛圍，感受家人和朋友間無盡的愛。願您的家庭充滿歡聲笑語，共度溫馨的時光。無論身在何處，心靈總能在這片歡樂的氛圍中相聚。
-
-            在新的一年即將來臨之際，願您的生活充滿希望和滿足。願您能夠實現自己的夢想，迎來更多的成功和幸福。同時，讓我們心懷感激，珍惜身邊的人和事，共同創造更美好的未來。
-
-            最後，謹代表我們整個團隊，衷心祝福您有一個愉快、溫馨、充實的聖誕節和新年。願您在這個節日季節中，擁有快樂的時光，與摯愛的人共度美好時光。
-
-            聖誕快樂，新年如意
+            test
         </p>
     </div>
+    <img src="./assets/Tree.gif" class="tree" alt="Tree">
+    <img src="./assets/Santa.gif" class="santa" alt="Santa">
 </body>
 <script type="text/babel">
     const canvas = document.querySelector('canvas')

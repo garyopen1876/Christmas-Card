@@ -24,7 +24,6 @@
     }
 
     body {
-        border-bottom: 1rem solid #fff;
         height: 100vh;
         width: 100vw;
     }
@@ -75,7 +74,7 @@
         height: 10rem;
         width: 10rem;
         right: 0;
-        bottom: -5.5rem;
+        bottom: -0.5rem;
     }
 
     .tree {
@@ -83,7 +82,17 @@
         height: 15rem;
         width: 15rem;
         left: 2rem;
-        bottom: -5rem;
+        bottom: 5px;
+    }
+
+    hr {
+        position: absolute;
+        height: 10px;
+        background-color: #ffffff;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
     }
 </style>
 
@@ -92,9 +101,11 @@
     <div class="paper blue">
         <div class="top-tape"></div>
         <p>
+            敬愛的<br />
             test
         </p>
     </div>
+    <hr>
     <img src="./assets/Tree.gif" class="tree" alt="Tree">
     <img src="./assets/Santa.gif" class="santa" alt="Santa">
 </body>
@@ -121,9 +132,7 @@
         ctx.clearRect(0, 0, width, height)
         if (snowflakes.length < maxSnowflakes)
             snowflakes.push(new Snowflake())
-
         ctx.fillStyle = ctx.strokeStyle = '#fff'
-
         snowflakes.forEach(snowflake => snowflake.update(elapsed, now))
     }
 

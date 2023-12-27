@@ -7,12 +7,17 @@
 </head>
 <style>
     :root {
-        --pink: #ecb2ba;
-        --pink-dark: #c6939a;
         --tape-gray: #dbd8be;
         --tape-edge-gray: #b7b49d;
         --transparent: rgba(255, 255, 255, 0);
         background: #163057;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     canvas {
@@ -21,13 +26,11 @@
         width: 100%;
         left: 0;
         top: 0;
+        z-index: 2;
     }
 
-    body {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .outer-frame {
+        z-index: 1;
     }
 
     .blue {
@@ -44,7 +47,7 @@
         min-height: 50%;
         display: flex;
         align-items: center;
-        justify-content: space-around; 
+        justify-content: space-around;
         font-family: "Caveat", cursive;
         font-size: 1.5em;
         box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
@@ -85,6 +88,7 @@
         width: 15rem;
         left: 2rem;
         bottom: 5px;
+        object-fit: contain;
     }
 
     .word {
@@ -95,7 +99,7 @@
         text-align: right;
     }
 
-    .img-word{
+    .img-word {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -114,32 +118,34 @@
 
     @media screen and (max-width: 600px) {
         .content {
-            font-size: 800%;
+            font-size: 80%;
         }
     }
 </style>
 
 <body>
     <canvas></canvas>
-    <div class="paper blue">
-        <div class="top-tape"></div>
-        <div class="word">
-            <p class="title">
-                親愛的朋友
-            </p>
-            <p class="content">
-                在這美好的聖誕季節，願你和大家充滿愛和喜樂。願遲來的聖誕之夜帶給你無限的祝福和溫馨的回憶。<br />
-                讓我們一起歡笑，一起分享，一起慶祝這個特別的日子。願你的心充滿溫暖與和平，祝你的新年都事事順心。<br />
-            </p>
-            <p class="tail-words">
-                聖誕快樂，新年快樂！<br />
-            </p>
+    <div class="outer-frame">
+        <div class="paper blue">
+            <div class="top-tape"></div>
+            <div class="word">
+                <p class="title">
+                    親愛的朋友
+                </p>
+                <p class="content">
+                    在這美好的聖誕季節，願你和大家充滿愛和喜樂。願遲來的聖誕之夜帶給你無限的祝福和溫馨的回憶。<br />
+                    讓我們一起歡笑，一起分享，一起慶祝這個特別的日子。願你的心充滿溫暖與和平，祝你的新年都事事順心。<br />
+                </p>
+                <p class="tail-words">
+                    聖誕快樂，新年快樂！<br />
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="img-world">
-        <hr>
-        <img src="./assets/Tree.gif" class="tree" alt="Tree">
-        <img src="./assets/Santa.gif" class="santa" alt="Santa">
+        <div class="img-world">
+            <hr>
+            <img src="./assets/Tree.gif" class="tree" alt="Tree">
+            <img src="./assets/Santa.gif" class="santa" alt="Santa">
+        </div>
     </div>
 </body>
 <script type="text/babel">

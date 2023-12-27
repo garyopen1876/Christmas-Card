@@ -26,6 +26,9 @@
     body {
         height: 100vh;
         width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .blue {
@@ -39,12 +42,12 @@
         position: relative;
         background: linear-gradient(to bottom right, var(--paper-dark), 20%, var(--transparent)), var(--paper-color);
         max-width: 80%;
-        max-height: auto;
+        min-height: 50%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around; 
         font-family: "Caveat", cursive;
-        font-size: 2rem;
+        font-size: 4rem;
         box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
         margin: auto;
         padding: 15px;
@@ -85,6 +88,18 @@
         bottom: 5px;
     }
 
+    .word {
+        flex-direction: column;
+    }
+
+    .content {
+        font-size: 80%;
+    }
+
+    .tail-words {
+        text-align: right;
+    }
+
     hr {
         position: absolute;
         height: 10px;
@@ -94,20 +109,36 @@
         width: 100%;
         margin: 0;
     }
+
+    @media screen and (max-width: 600px) {
+        .content {
+            font-size: 800%;
+        }
+    }
 </style>
 
 <body>
     <canvas></canvas>
     <div class="paper blue">
         <div class="top-tape"></div>
-        <p>
-            敬愛的<br />
-            test
-        </p>
+        <div class="word">
+            <p class="title">
+                親愛的朋友
+            </p>
+            <p class="content">
+                在這美好的聖誕季節，願你和大家充滿愛和喜樂。願遲來的聖誕之夜帶給你無限的祝福和溫馨的回憶。<br />
+                讓我們一起歡笑，一起分享，一起慶祝這個特別的日子。願你的心充滿溫暖與和平，祝你的新年都事事順心。<br />
+            </p>
+            <p class="tail-words">
+                聖誕快樂，新年快樂！<br />
+            </p>
+        </div>
     </div>
-    <hr>
-    <img src="./assets/Tree.gif" class="tree" alt="Tree">
-    <img src="./assets/Santa.gif" class="santa" alt="Santa">
+    <div class="img-world">
+        <hr>
+        <img src="./assets/Tree.gif" class="tree" alt="Tree">
+        <img src="./assets/Santa.gif" class="santa" alt="Santa">
+    </div>
 </body>
 <script type="text/babel">
     const canvas = document.querySelector('canvas')

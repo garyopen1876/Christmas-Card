@@ -18,6 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0;
     }
 
     canvas {
@@ -43,16 +44,16 @@
     .paper {
         position: relative;
         background: linear-gradient(to bottom right, var(--paper-dark), 20%, var(--transparent)), var(--paper-color);
-        min-width: 70%;
-        min-height: 50%;
+        min-width: 50%;
+        min-height: 80%;
         display: flex;
         align-items: center;
         justify-content: space-around;
         font-family: "Caveat", cursive;
         font-size: 1.5em;
         box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
-        margin: auto;
-        padding: 15px;
+        margin: 5%;
+        padding: 8%;
     }
 
     .paper::after {
@@ -74,6 +75,12 @@
         opacity: 0.5;
     }
 
+    .img-word {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
     .santa {
         position: absolute;
         height: 10rem;
@@ -91,6 +98,15 @@
         object-fit: contain;
     }
 
+    .moon {
+        position: absolute;
+        height: 15rem;
+        width: 15rem;
+        right: 1rem;
+        top: 3px;
+        object-fit: contain;
+    }
+
     .word {
         flex-direction: column;
     }
@@ -99,15 +115,9 @@
         text-align: right;
     }
 
-    .img-word {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-
     hr {
         position: absolute;
-        height: 10px;
+        height: 30px;
         background-color: #ffffff;
         left: 0;
         bottom: 0;
@@ -134,14 +144,15 @@
                 </p>
                 <p class="content">
                     在這美好的聖誕季節，願你和大家充滿愛和喜樂。願遲來的聖誕之夜帶給你無限的祝福和溫馨的回憶。<br />
-                    讓我們一起歡笑，一起分享，一起慶祝這個特別的日子。願你的心充滿溫暖與和平，祝你的新年都事事順心。<br />
+                    讓我們一起歡笑，一起分享，一起慶祝這個特別的日子。願你的心充滿溫暖與和平，祝你新的一年都事事順心。<br />
                 </p>
                 <p class="tail-words">
-                    聖誕快樂，新年快樂！<br />
+                    聖誕快樂！<br />
                 </p>
             </div>
         </div>
         <div class="img-world">
+            <img src="./assets/moon.gif" class="moon" alt="Moon">
             <hr>
             <img src="./assets/Tree.gif" class="tree" alt="Tree">
             <img src="./assets/Santa.gif" class="santa" alt="Santa">

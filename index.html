@@ -75,36 +75,34 @@
         opacity: 0.5;
     }
 
-    .img-word {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-
     .santa {
-        position: absolute;
+        position: fixed;
         height: 10rem;
         width: 10rem;
         right: 0;
         bottom: 0;
+        max-height: 30%;
+        max-width: 30%;
     }
 
     .tree {
-        position: absolute;
+        position: fixed;
         height: 15rem;
         width: 15rem;
         left: 2rem;
         bottom: 10px;
-        object-fit: contain;
+        max-height: 35%;
+        max-width: 30%;
     }
 
     .moon {
-        position: absolute;
+        position: fixed;
         height: 15rem;
         width: 15rem;
         right: 1rem;
         top: 3px;
-        object-fit: contain;
+        max-height: 35%;
+        max-width: 30%;
     }
 
     .word {
@@ -116,7 +114,7 @@
     }
 
     hr {
-        position: absolute;
+        position: fixed;
         height: 30px;
         background-color: #ffffff;
         left: 0;
@@ -151,12 +149,10 @@
                 </p>
             </div>
         </div>
-        <div class="img-world">
-            <img src="./assets/moon.gif" class="moon" alt="Moon">
-            <hr>
-            <img src="./assets/Tree.gif" class="tree" alt="Tree">
-            <img src="./assets/Santa.gif" class="santa" alt="Santa">
-        </div>
+        <img src="./assets/moon.gif" class="moon" alt="Moon">
+        <hr>
+        <img src="./assets/Tree.gif" class="tree" alt="Tree">
+        <img src="./assets/Santa.gif" class="santa" alt="Santa">
     </div>
 </body>
 <script type="text/babel">

@@ -41,13 +41,13 @@
     .paper {
         position: relative;
         background: linear-gradient(to bottom right, var(--paper-dark), 20%, var(--transparent)), var(--paper-color);
-        max-width: 80%;
+        min-width: 70%;
         min-height: 50%;
         display: flex;
         align-items: center;
         justify-content: space-around; 
         font-family: "Caveat", cursive;
-        font-size: 4rem;
+        font-size: 1.5em;
         box-shadow: var(--shadow-size) var(--shadow-size) 2px var(--paper-dark);
         margin: auto;
         padding: 15px;
@@ -92,12 +92,14 @@
         flex-direction: column;
     }
 
-    .content {
-        font-size: 80%;
-    }
-
     .tail-words {
         text-align: right;
+    }
+
+    .img-word{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     hr {
@@ -108,6 +110,7 @@
         bottom: 0;
         width: 100%;
         margin: 0;
+        box-sizing: border-box;
     }
 
     @media screen and (max-width: 600px) {
